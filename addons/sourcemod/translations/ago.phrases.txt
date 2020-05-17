@@ -1,0 +1,55 @@
+﻿"Phrases"
+{
+	"Achievement accomplished chat"
+	{
+		"en"		"You have accomplished achievement{green} %s{default}! Congratulations!"
+		"pl"		"Ukończono Achievement{green} %s{default}! Gratulacje!"
+	}
+	"Achievement accomplished chat all"
+	{
+		"en"		"Player{lightred} %N{default} has just accomplished Achievement{green} %s{default}!"
+		"pl"		"Gracz{lightred} %N{default} ukończył właśnie osiągnięcie{green} %s{default}!"
+	}
+	"Achievement accomplished hinttext"
+	{
+		"en"		"<font color='#ff0000'>Achievement accomplished!<font color='#00ff00'> %s!</font>"
+		"pl"		"<font color='#ff0000'>Achievement ukończony!<font color='#00ff00'> %s!</font>"
+	}
+	"MainMenuTitle"
+	{
+		"en"		"Accomplished achievements: %d/%d\nAchievements list:"
+		"pl"		"Ukończonych Achievementów: %d/%d\nLista Achievementów:"
+	}
+	"MainMenuTitleNoAchievements"
+	{
+		"en"		"There are no achievements..."
+		"pl"		"Brak aktywnych Achievementów..."
+	}
+	"Exit"
+	{
+		"en"		"Exit"
+		"pl"		"Wyjście"
+	}
+	"Back"
+	{
+		"en"		"Back"
+		"pl"		"Wróć"
+	}
+	"CategoryMenuTitle"
+	{
+		"en"		"Category: %s\nAchievements list:"
+		"pl"		"Kategoria: %s\nLista osiągnięć:"
+	}
+	"Achievement description no category"
+	{
+		"#format" "{1:s},{2:s},{3:d},{4:d},{5:s}"
+		"en"    "Name: {1}\nDescription: {2}\n \nProgress: {3}/{4}{5}"
+		"pl"    "Nazwa: {1}\nOpis: {2}\n \nPostęp: {3}/{4}{5}"
+	}
+	"Achievement description category"
+	{
+		"#format" "{1:s},{2:s},{3:s},{4:d},{5:d},{6:s}"
+		"en"    "Name: {1}\nDescription: {2}\nCategory: {3}\n \nProgress: {4}/{5} {6}"
+		"pl"    "Nazwa: {1}\nOpis: {2}\nKategoria: {3}\n \nPostęp: {4}/{5} {6}"
+	}
+}
