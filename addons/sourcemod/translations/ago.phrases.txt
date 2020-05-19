@@ -4,52 +4,62 @@
 	{
 		"en"		"You have accomplished achievement{green} %s{default}! Congratulations!"
 		"pl"		"Ukończono Achievement{green} %s{default}! Gratulacje!"
+		"sv"		"Du har uppnått prestation{green} %s{default}! Grattis!"
 	}
 	"Achievement accomplished chat all"
 	{
 		"en"		"Player{lightred} %N{default} has just accomplished Achievement{green} %s{default}!"
 		"pl"		"Gracz{lightred} %N{default} ukończył właśnie osiągnięcie{green} %s{default}!"
+		"sv"		"Spelare{lightred} %N{default} har just uppnått prestation{green} %s{default}!"
 	}
 	"Achievement accomplished hinttext"
 	{
 		"en"		"<font color='#ff0000'>Achievement accomplished!<font color='#00ff00'> %s!</font>"
 		"pl"		"<font color='#ff0000'>Achievement ukończony!<font color='#00ff00'> %s!</font>"
+		"sv"		"<font color='#ff0000'>Prestationen uppnåtts!<font color='#00ff00'> %s!</font>"
 	}
 	"MainMenuTitle"
 	{
 		"en"		"Accomplished achievements: %d/%d\nAchievements list:"
 		"pl"		"Ukończonych Achievementów: %d/%d\nLista Achievementów:"
+		"sv"		"Uppnådda prestationer: %d/%d\nPrestationslista:"
 	}
 	"MainMenuTitleNoAchievements"
 	{
 		"en"		"There are no achievements..."
 		"pl"		"Brak aktywnych Achievementów..."
+		"sv"		"Det finns inga prestationer..."
 	}
 	"Exit"
 	{
 		"en"		"Exit"
 		"pl"		"Wyjście"
+		"sv"		"Avsluta"
 	}
 	"Back"
 	{
 		"en"		"Back"
 		"pl"		"Wróć"
+		"sv"		"Tillbaka"
 	}
 	"CategoryMenuTitle"
 	{
 		"en"		"Category: %s\nAchievements list:"
 		"pl"		"Kategoria: %s\nLista osiągnięć:"
+		"sv"		"Kategori: %s\nPrestationslista:"
 	}
 	"Achievement description no category"
 	{
 		"#format" "{1:s},{2:s},{3:d},{4:d},{5:s}"
 		"en"    "Name: {1}\nDescription: {2}\n \nProgress: {3}/{4}{5}"
 		"pl"    "Nazwa: {1}\nOpis: {2}\n \nPostęp: {3}/{4}{5}"
+		"sv"    "namn: {1}\nBeskrivning: {2}\n \nFramsteg: {3}/{4}{5}"
 	}
 	"Achievement description category"
 	{
 		"#format" "{1:s},{2:s},{3:s},{4:d},{5:d},{6:s}"
 		"en"    "Name: {1}\nDescription: {2}\nCategory: {3}\n \nProgress: {4}/{5} {6}"
 		"pl"    "Nazwa: {1}\nOpis: {2}\nKategoria: {3}\n \nPostęp: {4}/{5} {6}"
+		"sv"    "Name: {1}\nBeskrivning: {2}\nKategori: {3}\n \nFramsteg: {4}/{5} {6}"
 	}
 }
