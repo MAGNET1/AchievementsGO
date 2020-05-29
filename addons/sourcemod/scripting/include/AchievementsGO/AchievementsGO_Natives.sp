@@ -102,23 +102,23 @@ bool IsStringContainingRestrictedCharacters(char[] tab) {
 // @@ Add/Remove points
 
 public int AddPoint(Handle plugin, int numParams) {
-    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), 1);
+    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), 1, GetNativeCell(3));
 }
 
 public int AddPoints(Handle plugin, int numParams) {
-    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), GetNativeCell(3));
+    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), GetNativeCell(3), GetNativeCell(4));
 }
 
 public int RemovePoint(Handle plugin, int numParams) {
-    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), -1);
+    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), -1, GetNativeCell(3));
 }
 
 public int RemovePoints(Handle plugin, int numParams) {
-    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), -GetNativeCell(3));
+    return UpdatePoints(GetNativeCell(1), GetNativeCell(2), -GetNativeCell(3), GetNativeCell(4));
 }
 
 public int ResetAchievement(Handle plugin, int numParams) {
-    if (!IsEnoughPlayers())
+    if (!GetNativeCell(3) && !IsEnoughPlayers())
         return false;
 
     int client = GetNativeCell(1);
@@ -147,7 +147,7 @@ public int ResetAchievement(Handle plugin, int numParams) {
 }
 
 public int SetPoints(Handle plugin, int numParams) {
-    if (!IsEnoughPlayers())
+    if (!GetNativeCell(4) && !IsEnoughPlayers())
         return false;
 
     int client = GetNativeCell(1);
@@ -191,8 +191,8 @@ public int SetPoints(Handle plugin, int numParams) {
     return true;
 }
 
-public int UpdatePoints(int client, int IdOfAchievement, int amount) {
-    if (!IsEnoughPlayers())
+public int UpdatePoints(int client, int IdOfAchievement, int amount, bool enforce) {
+    if (!enforce && !IsEnoughPlayers())
         return NOT_FOUND;
 
     if (!IsValidClient(client) || IdOfAchievement == NOT_FOUND)

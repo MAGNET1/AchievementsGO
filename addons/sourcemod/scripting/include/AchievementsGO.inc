@@ -22,9 +22,10 @@ native bool AGO_AddAchievement(char[] Name, char[] Description, char[] Category,
  *
  * @param client			ID of the client
  * @param IdOfAchievement	ID of achievement (retrieved from AGO_AddAchievement() function)
+ * @param enforce	  if true, omits minimal players restriction (ago_players_amount ConVar)
  * @return					Current achievement progress or -1 if failure.
  */
-native int AGO_AddPoint(int client, int IdOfAchievement);
+native int AGO_AddPoint(int client, int IdOfAchievement, bool enforce=false);
 
 /**
  * Adds points to the player's achievement. Doesn't work if Achievement if already accomplished
@@ -32,18 +33,20 @@ native int AGO_AddPoint(int client, int IdOfAchievement);
  * @param client			ID of the client
  * @param IdOfAchievement	ID of achievement (retrieved from AGO_AddAchievement() function)
  * @param amount			Amount of points to be given
+ * @param enforce	  if true, omits minimal players restriction (ago_players_amount ConVar)
  * @return					Current achievement progress or -1 if failure.
  */
-native int AGO_AddPoints(int client, int IdOfAchievement, int amount);
+native int AGO_AddPoints(int client, int IdOfAchievement, int amount, bool enforce=false);
 
 /**
  * Removes one point of the player's achievement. Doesn't work if Achievement if already accomplished
  *
  * @param client			ID of the client
  * @param IdOfAchievement	ID of achievement (retrieved from AGO_AddAchievement() function)
+ * @param enforce	  if true, omits minimal players restriction (ago_players_amount ConVar)
  * @return					Current achievement progress or -1 if failure.
  */
-native int AGO_RemovePoint(int client, int IdOfAchievement);
+native int AGO_RemovePoint(int client, int IdOfAchievement, bool enforce=false);
 
 /**
  * Removes points of the player's achievement. Doesn't work if Achievement if already accomplished
@@ -51,18 +54,20 @@ native int AGO_RemovePoint(int client, int IdOfAchievement);
  * @param client			ID of the client
  * @param IdOfAchievement	ID of achievement (retrieved from AGO_AddAchievement() function)
  * @param amount			Amount of points to be taken away from
+ * @param enforce	  if true, omits minimal players restriction (ago_players_amount ConVar)
  * @return					Current achievement progress or -1 if failure.
  */
-native int AGO_RemovePoints(int client, int IdOfAchievement, int amount);
+native int AGO_RemovePoints(int client, int IdOfAchievement, int amount, bool enforce=false);
 
 /**
  * Resets Achievement's progress. It also marks Achievement as not completed
  *
  * @param client			ID of the client
  * @param IdOfAchievement	ID of achievement (retrieved from AGO_AddAchievement() function)
+ * @param enforce	  if true, omits minimal players restriction (ago_players_amount ConVar)
  * @return					true, if reset succeded. false otherwise.
  */
-native bool AGO_ResetAchievement(int client, int IdOfAchievement);
+native bool AGO_ResetAchievement(int client, int IdOfAchievement, bool enforce=false);
 
 /**
  * Sets the concrete amount of points to a given Achievement. Doesn't work if Achievement if already accomplished
@@ -70,9 +75,10 @@ native bool AGO_ResetAchievement(int client, int IdOfAchievement);
  * @param client			ID of the client
  * @param IdOfAchievement	ID of achievement (retrieved from AGO_AddAchievement() function)
  * @param amount			Amount of points to be set   
+ * @param enforce	  if true, omits minimal players restriction (ago_players_amount ConVar)
  * @return					Current achievement progress or -1 if failure.
  */
-native bool AGO_SetPoints(int client, int IdOfAchievement, int amount);
+native bool AGO_SetPoints(int client, int IdOfAchievement, int amount, bool enforce=false);
 
 /**
  * Retrieves Achievement's name by its index
