@@ -267,7 +267,7 @@ public int GetIndexByName(Handle plugin, int numParams) {
     for (int i = 0; i < AmountOfActiveAchievements; i++) {
         AchievementName.GetString(i, ArrayName, sizeof(ArrayName));
         if (StrEqual(Name, ArrayName))
-            return i;
+            return AchievementID.Get(i);
     }
     return NOT_FOUND;
 }
