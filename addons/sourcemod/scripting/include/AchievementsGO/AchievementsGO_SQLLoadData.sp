@@ -245,10 +245,13 @@ public void ProcessPlayerAchievementResults(Database db, DBResultSet results, co
         // DB.Query(ProcessPlayerInsertionResults, buffer, _, DBPrio_High);
     }
 
-    if (wasAnyInsert)
+    if (wasAnyInsert) {
         SQL_ExecuteTransaction(DB, tableTransaction, SQL_InsertRowsOnSuccess, SQL_InsertRowsOnFailure, GetClientUserId(client), DBPrio_Normal);
-    else
+    }
+    else {
+        delete tableTransaction;
         SendForwardPlayerAchievementsLoaded(client);
+    }
 }
 
 public void SQL_InsertRowsOnSuccess(Database db, int clientUserId, int numQueries, Handle[] results, any[] queryData) {

@@ -56,7 +56,7 @@ public Plugin myinfo = {
     name = "AchievementsGO",
     author = "MAGNET | YouTube: Koduj z Magnetem",
     description = "Tool for creating your own achievements/missions",
-    version = "2.1",
+    version = "2.2",
     url = "http://go-code.pl/"
 };
 
